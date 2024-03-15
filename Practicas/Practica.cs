@@ -1,49 +1,38 @@
 ﻿using SeminarioLenguajeDotnet.MenuClasses;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace SeminarioLenguajeDotnet.Practicas
+namespace SeminarioLenguajeDotnet.Practicas;
+
+abstract internal class Practica(Menu parent)
 {
-    internal abstract class Practica
+    private Menu Parent { get; } = parent;
+
+    abstract public string Description { get; protected set; }
+
+    abstract protected void Execute();
+
+    public void Run()
     {
-        public Menu parent { get; private set; }
-        protected readonly string description;
+        ShowText();
+        Execute();
+        Return();
+    }
 
-        public abstract void Execute();
-        
-        public Practica(Menu parent, string description)
-        {
-            this.parent = parent;
-            this.description = description;
-        }
+    private void ShowText()
+    {
+        Console.Clear();
+        Console.WriteLine("Consigna:");
+        Console.WriteLine(Description);
+        Console.WriteLine();
+        Console.WriteLine("Resolución:");
+        Console.WriteLine();
+    }
 
-        public void Run()
-        {
-            ShowText();
-            Execute();
-            Return();
-        }
-
-        public void ShowText()
-        {
-            Console.Clear();
-            Console.WriteLine("Consigna:");
-            Console.WriteLine(description);
-            Console.WriteLine();
-            Console.WriteLine("Resolución:");
-            Console.WriteLine();
-        }
-
-        public void Return()
-        {
-            Console.WriteLine();
-            Console.WriteLine("Ejericio completado.");
-            Console.WriteLine("Presione cualquier tecla para volver a la lista anterior.");
-            Console.ReadKey(true);
-            parent.Run();
-        }
+    private void Return()
+    {
+        Console.WriteLine();
+        Console.WriteLine("Ejericio completado.");
+        Console.WriteLine("Presione cualquier tecla para volver a la lista anterior.");
+        Console.ReadKey(true);
+        Parent.Run();
     }
 }

@@ -1,26 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace SeminarioLenguajeDotnet.MenuClasses;
 
-namespace SeminarioLenguajeDotnet.MenuClasses
+internal class MenuItem(string name, Action action)
 {
-    internal class MenuItem
-    {
-        public string name { get; private set; }
-        public Action action { get; private set; }
-        public Action? back { get; private set; }
-
-        public MenuItem(string name, Action action)
-        {
-            this.name = name;
-            this.action = action;
-        }
-
-        public MenuItem(string name, Action action, Action back) : this(name, action)
-        {
-            this.back = back;
-        }
-    }
+    public string Name   { get; private set; } = name;
+    public Action Action { get; private set; } = action;
 }
