@@ -4,7 +4,7 @@ namespace SeminarioLenguajeDotnet.Practicas.Practica2;
 
 internal class Practica2Ejercicio5(Menu parent) : Practica(parent)
 {
-    public override string Description { get; protected set; } = 
+    public override string Description { get; protected set; } =
         "Qué líneas del siguiente código provocan conversiones boxing y unboxing.\n" +
         "char c1 = 'A';\n"                                                           +
         "string st1 = \"A\";\n"                                                      +
