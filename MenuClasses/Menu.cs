@@ -2,7 +2,7 @@
 
 internal class Menu(string title, IReadOnlyList<MenuItem> items, Menu? parent = null)
 {
-    readonly private string _separator = " " + new string('#', 100);
+    readonly private string _separator = " " + new string('#', Console.WindowWidth - 2);
     private          int    _lastLeft;
     private          int    _lastTop;
     private          int    _left;
