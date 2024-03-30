@@ -5,6 +5,10 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeminarioLenguajeDotnet", "SeminarioLenguajeDotnet.csproj", "{7EAA71B6-E10B-4FCC-A2D8-A0D2AA03E5D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automotores", "Automotores\Automotores.csproj", "{C15FC67B-D8A2-4B98-8A22-00E5FCE1FC02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Figuras", "Figuras\Figuras.csproj", "{F4EAE721-8D0A-42D0-B67C-23A27D71398C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{7EAA71B6-E10B-4FCC-A2D8-A0D2AA03E5D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EAA71B6-E10B-4FCC-A2D8-A0D2AA03E5D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EAA71B6-E10B-4FCC-A2D8-A0D2AA03E5D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C15FC67B-D8A2-4B98-8A22-00E5FCE1FC02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C15FC67B-D8A2-4B98-8A22-00E5FCE1FC02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C15FC67B-D8A2-4B98-8A22-00E5FCE1FC02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C15FC67B-D8A2-4B98-8A22-00E5FCE1FC02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4EAE721-8D0A-42D0-B67C-23A27D71398C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4EAE721-8D0A-42D0-B67C-23A27D71398C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4EAE721-8D0A-42D0-B67C-23A27D71398C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4EAE721-8D0A-42D0-B67C-23A27D71398C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

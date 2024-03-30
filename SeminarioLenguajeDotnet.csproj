@@ -5,6 +5,34 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
     </PropertyGroup>
 
+    <ItemGroup>
+        <Content Include="Archivos\**">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Remove="Automotores\bin\**"/>
+        <Compile Remove="Automotores\obj\**"/>
+        <Compile Remove="Figuras\bin\**"/>
+        <Compile Remove="Figuras\obj\**"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Remove="Automotores\bin\**"/>
+        <EmbeddedResource Remove="Automotores\obj\**"/>
+        <EmbeddedResource Remove="Figuras\bin\**"/>
+        <EmbeddedResource Remove="Figuras\obj\**"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="Automotores\bin\**"/>
+        <None Remove="Automotores\obj\**"/>
+        <None Remove="Figuras\bin\**"/>
+        <None Remove="Figuras\obj\**"/>
+    </ItemGroup>
 </Project>

@@ -3,6 +3,7 @@ using SeminarioLenguajeDotnet.MenuClasses;
 using SeminarioLenguajeDotnet.Practicas.Practica1;
 using SeminarioLenguajeDotnet.Practicas.Practica2;
 using SeminarioLenguajeDotnet.Practicas.Practica3;
+using SeminarioLenguajeDotnet.Practicas.Practica4;
 
 namespace SeminarioLenguajeDotnet;
 
@@ -16,11 +17,13 @@ abstract internal class Program
         List<MenuItem> practica1 = [];
         List<MenuItem> practica2 = [];
         List<MenuItem> practica3 = [];
+        List<MenuItem> practica4 = [];
 
         Menu root          = new("Seminario de Lenguaje .NET - Prácticas", main);
         Menu practica1Menu = new("Práctica 1", practica1, root);
         Menu practica2Menu = new("Práctica 2", practica2, root);
         Menu practica3Menu = new("Práctica 3", practica3, root);
+        Menu practica4Menu = new("Práctica 4", practica4, root);
 
         #region Practica 1
         Practica1Ejercicio1  practica1Ejercicio1  = new(practica1Menu);
@@ -85,9 +88,25 @@ abstract internal class Program
         Practica3Ejercicio17 practica3Ejercicio17 = new(practica3Menu);
         #endregion
 
+        #region Practica 4
+        Practica4Ejercicio1  practica4Ejercicio1  = new(practica4Menu);
+        Practica4Ejercicio2  practica4Ejercicio2  = new(practica4Menu);
+        Practica4Ejercicio3  practica4Ejercicio3  = new(practica4Menu);
+        Practica4Ejercicio4  practica4Ejercicio4  = new(practica4Menu);
+        Practica4Ejercicio5  practica4Ejercicio5  = new(practica4Menu);
+        Practica4Ejercicio6  practica4Ejercicio6  = new(practica4Menu);
+        Practica4Ejercicio7  practica4Ejercicio7  = new(practica4Menu);
+        Practica4Ejercicio8  practica4Ejercicio8  = new(practica4Menu);
+        Practica4Ejercicio9  practica4Ejercicio9  = new(practica4Menu);
+        Practica4Ejercicio10 practica4Ejercicio10 = new(practica4Menu);
+        Practica4Ejercicio11 practica4Ejercicio11 = new(practica4Menu);
+        Practica4Ejercicio12 practica4Ejercicio12 = new(practica4Menu);
+        #endregion
+
         main.Add(new MenuItem("Práctica 1", practica1Menu.Run));
         main.Add(new MenuItem("Práctica 2", practica2Menu.Run));
         main.Add(new MenuItem("Práctica 3", practica3Menu.Run));
+        main.Add(new MenuItem("Práctica 4", practica4Menu.Run));
 
         #region Practica 1 items
         practica1.Add(new MenuItem("Ejercicio 1",  practica1Ejercicio1.Run));
@@ -150,6 +169,21 @@ abstract internal class Program
         practica3.Add(new MenuItem("Ejercicio 15", practica3Ejercicio15.Run));
         practica3.Add(new MenuItem("Ejercicio 16", practica3Ejercicio16.Run));
         practica3.Add(new MenuItem("Ejercicio 17", practica3Ejercicio17.Run));
+        #endregion
+
+        #region Practica 4 items
+        practica4.Add(new MenuItem("Ejercicio 1",  practica4Ejercicio1.Run));
+        practica4.Add(new MenuItem("Ejercicio 2",  practica4Ejercicio2.Run));
+        practica4.Add(new MenuItem("Ejercicio 3",  practica4Ejercicio3.Run));
+        practica4.Add(new MenuItem("Ejercicio 4",  practica4Ejercicio4.Run));
+        practica4.Add(new MenuItem("Ejercicio 5",  practica4Ejercicio5.Run));
+        practica4.Add(new MenuItem("Ejercicio 6",  practica4Ejercicio6.Run));
+        practica4.Add(new MenuItem("Ejercicio 7",  practica4Ejercicio7.Run));
+        practica4.Add(new MenuItem("Ejercicio 8",  practica4Ejercicio8.Run));
+        practica4.Add(new MenuItem("Ejercicio 9",  practica4Ejercicio9.Run));
+        practica4.Add(new MenuItem("Ejercicio 10", practica4Ejercicio10.Run));
+        practica4.Add(new MenuItem("Ejercicio 11", practica4Ejercicio11.Run));
+        practica4.Add(new MenuItem("Ejercicio 12", practica4Ejercicio12.Run));
         #endregion
 
         new MenuRun(root).Run();

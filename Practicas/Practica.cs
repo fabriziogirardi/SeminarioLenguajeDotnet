@@ -4,9 +4,8 @@ namespace SeminarioLenguajeDotnet.Practicas;
 
 abstract internal class Practica(Menu parent)
 {
-    private Menu Parent { get; } = parent;
-
     abstract public string Description { get; protected set; }
+    private         Menu   Parent      { get; } = parent;
 
     abstract protected void Execute();
 
